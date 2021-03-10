@@ -11,3 +11,5 @@ Here you'll mostly find terraform, rust, python, and shell scripts, with a spatt
 {{ range recentReleases 10 }}
 - [{{ .Name }}]({{ .URL }}) ([{{ .LastRelease.TagName }}]({{ .LastRelease.URL }}), {{ humanize .LastRelease.PublishedAt }}) - {{ .Description }}
 {{- end }}
+
+##### This readme was rendered with [muesli/markscribe](//github.com/muesli/markscribe)
