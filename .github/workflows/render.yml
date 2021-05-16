@@ -3,7 +3,7 @@ name: Render readme
 on:
   push:
   schedule:
-    - cron: "0 */6 * * *"
+    - cron: "0 */1 * * *"
 
 jobs:
   markscribe:
@@ -24,3 +24,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           commit_message: Render readme
+          commit_options: ${{ fromJSON('[null, "--amend"]')[startsWith(github.event.commits[0].message, 'Render readme')] }}
