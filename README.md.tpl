@@ -12,4 +12,4 @@ Here you'll mostly find terraform, rust, python, and shell scripts, with a spatt
 - [{{ .Name }}]({{ .URL }}) ([{{ .LastRelease.TagName }}]({{ .LastRelease.URL }}), {{ humanize .LastRelease.PublishedAt }}) - {{ .Description }}
 {{- end }}
 
-##### This readme was rendered with [muesli/markscribe](//github.com/muesli/markscribe)
+###### Shout-out to [@muesli](//github.com/muesli/markscribe) for the auto-generating readme
