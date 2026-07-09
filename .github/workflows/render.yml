@@ -12,12 +12,12 @@ jobs:
     steps:
       - run: sudo apt update && sudo apt -y install git
 
-      - uses: actions/checkout@master
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
         with:
           # so we can commit --amend and push -f
           fetch-depth: 2
 
-      - uses: muesli/readme-scribe@master
+      - uses: muesli/readme-scribe@5a187a2a36ef894335f17a7d01c32b0e28c6d948 # v0.1
         env:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
         with:
@@ -31,7 +31,7 @@ jobs:
           git log -n1 --pretty='%B' >> "$GITHUB_ENV"
           echo 'EOM' >> "$GITHUB_ENV"
 
-      - uses: stefanzweifel/git-auto-commit-action@v4
+      - uses: stefanzweifel/git-auto-commit-action@3ea6ae190baf489ba007f7c92608f33ce20ef04a # v4
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
